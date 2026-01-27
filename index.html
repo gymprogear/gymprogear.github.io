@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGear - Cửa hàng dụng cụ tập gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>FitGear</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#products">Sản phẩm</a></li>
+                    <li><a href="#about">Về chúng tôi</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Nâng cao sức khỏe của bạn</h1>
+            <p class="hero-subtitle">Dụng cụ gym chất lượng cao với giá cạnh tranh</p>
+            <button class="btn btn-primary">Mua ngay</button>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-dumbbell">
+                <i class="fas fa-dumbbell"></i>
+            </div>
+            <div class="floating-weight">
+                <i class="fas fa-weight"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Sản phẩm nổi bật</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="dumbbells">Tạ tay</button>
+                <button class="filter-btn" data-filter="barbells">Tạ đòn</button>
+                <button class="filter-btn" data-filter="machines">Máy tập</button>
+                <button class="filter-btn" data-filter="accessories">Phụ kiện</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Tại sao chọn chúng tôi?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Chất lượng cao</h3>
+                    <p>Tất cả sản phẩm đều được kiểm tra chất lượng kỹ càng</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Giao hàng nhanh</h3>
+                    <p>Miễn phí vận chuyển cho đơn hàng trên 500.000đ</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Hỗ trợ 24/7</h3>
+                    <p>Đội ngũ hỗ trợ khách hàng luôn sẵn sàng giúp đỡ</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bảo hành 2 năm</h3>
+                    <p>Bảo hành toàn bộ sản phẩm trong 2 năm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <button class="close-btn">&times;</button>
+            <h2>Giỏ hàng</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <span>Tổng cộng:</span>
+                <span id="totalPrice">0đ</span>
+            </div>
+            <button class="btn btn-primary btn-checkout">Thanh toán</button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-rating">
+                        <div class="stars" id="modalRating"></div>
+                        <span id="modalReviews"></span>
+                    </div>
+                    <p id="modalDescription"></p>
+                    <div class="modal-specs">
+                        <h4>Thông số kỹ thuật:</h4>
+                        <ul id="modalSpecs"></ul>
+                    </div>
+                    <div class="modal-price">
+                        <span id="modalPrice"></span>
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Về FitGear</h4>
+                    <p>FitGear là cửa hàng dụng cụ tập gym hàng đầu tại Việt Nam với các sản phẩm chất lượng cao.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Khuyến mãi</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>Email: info@fitgear.vn</p>
+                    <p>Hotline: 1900-xxxx</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Theo dõi</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FitGear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
