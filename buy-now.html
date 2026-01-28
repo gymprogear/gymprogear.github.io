@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYM PRO GEAR — Mua ngay</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-loader" aria-live="polite">
+    <div class="loader-ring"></div>
+    <span>Đang tải ưu đãi...</span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="logo">GYM PRO GEAR</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="features.html">Tính năng</a>
+      <a href="reviews.html">Đánh giá</a>
+      <a href="buy-now.html">Mua ngay</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="btn ghost">Đăng nhập</button>
+      <button class="cart-button" aria-label="Mở giỏ hàng">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="cart-close" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng</span>
+        <strong class="cart-total-value">0₫</strong>
+      </div>
+      <button class="btn primary cart-checkout">Thanh toán</button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="section cta">
+      <div>
+        <h2>Nhận báo giá cá nhân hoá</h2>
+        <p>Để lại thông tin, chúng tôi sẽ liên hệ trong 15 phút.</p>
+        <div class="hero-stats" style="margin-top: 20px;">
+          <div>
+            <strong>Ưu đãi 30%</strong>
+            <span>cho đơn đầu tiên</span>
+          </div>
+          <div>
+            <strong>Lắp đặt miễn phí</strong>
+            <span>tại nội thành</span>
+          </div>
+          <div>
+            <strong>Hỗ trợ 24/7</strong>
+            <span>tư vấn bài tập</span>
+          </div>
+        </div>
+      </div>
+      <div class="cta-actions">
+        <input type="text" placeholder="Họ và tên" aria-label="Họ và tên" />
+        <input type="email" placeholder="Email" aria-label="Email" />
+        <input type="tel" placeholder="Số điện thoại" aria-label="Số điện thoại" />
+        <button class="btn primary">Nhận tư vấn</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 GYM PRO GEAR. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

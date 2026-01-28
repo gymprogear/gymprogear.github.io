@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYM PRO GEAR — Sản phẩm</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-loader" aria-live="polite">
+    <div class="loader-ring"></div>
+    <span>Đang tải sản phẩm...</span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="logo">GYM PRO GEAR</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="features.html">Tính năng</a>
+      <a href="reviews.html">Đánh giá</a>
+      <a href="buy-now.html">Mua ngay</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="btn ghost">Đăng nhập</button>
+      <button class="cart-button" aria-label="Mở giỏ hàng">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="cart-close" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng</span>
+        <strong class="cart-total-value">0₫</strong>
+      </div>
+      <button class="btn primary cart-checkout">Thanh toán</button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="section">
+      <div class="section-head">
+        <h2>Danh mục sản phẩm</h2>
+        <p>Chọn nhanh theo nhu cầu và mục tiêu tập luyện.</p>
+        <div class="filters" role="tablist">
+          <button class="chip active" data-filter="all">Tất cả</button>
+          <button class="chip" data-filter="strength">Sức mạnh</button>
+          <button class="chip" data-filter="cardio">Cardio</button>
+          <button class="chip" data-filter="accessory">Phụ kiện</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product" data-category="strength">
+          <div class="product-media"></div>
+          <h3>Giàn tập đa năng GX-500</h3>
+          <p>Khung thép 2mm, chịu tải 500kg, thiết kế tối ưu không gian.</p>
+          <div class="product-foot">
+            <span class="price">24.500.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Giàn tập GX-500" data-price="24500000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="strength">
+          <div class="product-media strength"></div>
+          <h3>Bộ ghế tập PowerBench</h3>
+          <p>Điều chỉnh 8 góc độ, đệm dày 8cm, chịu tải 350kg.</p>
+          <div class="product-foot">
+            <span class="price">4.200.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="PowerBench" data-price="4200000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="cardio">
+          <div class="product-media cardio"></div>
+          <h3>Máy chạy bộ AirRun X</h3>
+          <p>Động cơ 3HP, màn hình cảm ứng, 12 chế độ luyện tập.</p>
+          <div class="product-foot">
+            <span class="price">18.200.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="AirRun X" data-price="18200000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="cardio">
+          <div class="product-media cardio two"></div>
+          <h3>Xe đạp tập Sprint S</h3>
+          <p>Kháng lực từ tính, kết nối app, theo dõi nhịp tim.</p>
+          <div class="product-foot">
+            <span class="price">7.800.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Sprint S" data-price="7800000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="accessory">
+          <div class="product-media accessory"></div>
+          <h3>Thảm tập chống trượt</h3>
+          <p>Độ dày 12mm, chống ồn, thân thiện môi trường.</p>
+          <div class="product-foot">
+            <span class="price">490.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Thảm chống trượt" data-price="490000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="accessory">
+          <div class="product-media accessory two"></div>
+          <h3>Bộ dây kháng lực Elite</h3>
+          <p>5 mức lực, tay cầm chắc chắn, phù hợp toàn thân.</p>
+          <div class="product-foot">
+            <span class="price">650.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Dây kháng lực Elite" data-price="650000">Thêm</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 GYM PRO GEAR. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,197 +1,270 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitGear - Cửa hàng dụng cụ tập gym</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYM PRO GEAR — Dụng cụ tập gym</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <i class="fas fa-dumbbell"></i>
-                    <span>FitGear</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Trang chủ</a></li>
-                    <li><a href="#products">Sản phẩm</a></li>
-                    <li><a href="#about">Về chúng tôi</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <a href="#" class="search-icon">
-                        <i class="fas fa-search"></i>
-                    </a>
-                    <a href="#cart" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body data-page="home">
+  <div class="page-loader" aria-live="polite">
+    <div class="loader-ring"></div>
+    <span>đây là sản phẩm của nhóm 5</span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="logo">GYM PRO GEAR</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="features.html">Tính năng</a>
+      <a href="reviews.html">Đánh giá</a>
+      <a href="buy-now.html">Mua ngay</a>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Nâng cao sức khỏe của bạn</h1>
-            <p class="hero-subtitle">Dụng cụ gym chất lượng cao với giá cạnh tranh</p>
-            <button class="btn btn-primary">Mua ngay</button>
-        </div>
-        <div class="hero-animation">
-            <div class="floating-dumbbell">
-                <i class="fas fa-dumbbell"></i>
-            </div>
-            <div class="floating-weight">
-                <i class="fas fa-weight"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title">Sản phẩm nổi bật</h2>
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">Tất cả</button>
-                <button class="filter-btn" data-filter="dumbbells">Tạ tay</button>
-                <button class="filter-btn" data-filter="barbells">Tạ đòn</button>
-                <button class="filter-btn" data-filter="machines">Máy tập</button>
-                <button class="filter-btn" data-filter="accessories">Phụ kiện</button>
-            </div>
-
-            <div class="products-grid" id="productsGrid">
-                <!-- Products will be inserted here by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Tại sao chọn chúng tôi?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3>Chất lượng cao</h3>
-                    <p>Tất cả sản phẩm đều được kiểm tra chất lượng kỹ càng</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <h3>Giao hàng nhanh</h3>
-                    <p>Miễn phí vận chuyển cho đơn hàng trên 500.000đ</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Hỗ trợ 24/7</h3>
-                    <p>Đội ngũ hỗ trợ khách hàng luôn sẵn sàng giúp đỡ</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Bảo hành 2 năm</h3>
-                    <p>Bảo hành toàn bộ sản phẩm trong 2 năm</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cart Modal -->
-    <div id="cartModal" class="cart-modal">
-        <div class="cart-content">
-            <button class="close-btn">&times;</button>
-            <h2>Giỏ hàng</h2>
-            <div id="cartItems"></div>
-            <div class="cart-total">
-                <span>Tổng cộng:</span>
-                <span id="totalPrice">0đ</span>
-            </div>
-            <button class="btn btn-primary btn-checkout">Thanh toán</button>
-        </div>
+    <div class="topbar-actions">
+      <button class="btn ghost">Đăng nhập</button>
+      <button class="cart-button" aria-label="Mở giỏ hàng" data-tour="cart">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
     </div>
+  </header>
 
-    <!-- Product Modal -->
-    <div id="productModal" class="product-modal">
-        <div class="modal-content">
-            <button class="close-btn">&times;</button>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalImage" src="" alt="">
-                </div>
-                <div class="modal-info">
-                    <h2 id="modalTitle"></h2>
-                    <div class="modal-rating">
-                        <div class="stars" id="modalRating"></div>
-                        <span id="modalReviews"></span>
-                    </div>
-                    <p id="modalDescription"></p>
-                    <div class="modal-specs">
-                        <h4>Thông số kỹ thuật:</h4>
-                        <ul id="modalSpecs"></ul>
-                    </div>
-                    <div class="modal-price">
-                        <span id="modalPrice"></span>
-                    </div>
-                    <button class="btn btn-primary add-to-cart-btn">Thêm vào giỏ</button>
-                </div>
-            </div>
-        </div>
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="cart-close" aria-label="Đóng giỏ hàng">✕</button>
     </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng cộng</span>
+        <strong class="cart-total-value">0₫</strong>
+      </div>
+      <button class="btn primary cart-checkout">Thanh toán</button>
+    </div>
+  </aside>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Về FitGear</h4>
-                    <p>FitGear là cửa hàng dụng cụ tập gym hàng đầu tại Việt Nam với các sản phẩm chất lượng cao.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Liên kết nhanh</h4>
-                    <ul>
-                        <li><a href="#">Sản phẩm</a></li>
-                        <li><a href="#">Khuyến mãi</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Liên hệ</h4>
-                    <p>Email: info@fitgear.vn</p>
-                    <p>Hotline: 1900-xxxx</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Theo dõi</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 FitGear. All rights reserved.</p>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80">
+          <source src="https://cdn.coverr.co/videos/coverr-man-working-out-1564/1080p.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-content">
+        <div class="badge">Bộ sưu tập 2026 • Miễn phí vận chuyển</div>
+        <h1>Nâng cấp phòng gym tại nhà với thiết bị <span class="accent">chuẩn chuyên nghiệp</span>.</h1>
+        <p>Khám phá dụng cụ tập gym cao cấp: tạ, ghế, giàn kéo, máy cardio và phụ kiện. Thiết kế tối ưu hiệu suất, an toàn và thẩm mỹ.</p>
+        <div class="hero-actions">
+          <button class="btn primary">Khám phá ngay</button>
+          <button class="btn outline">Xem video 30s</button>
         </div>
-    </footer>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;">
+          <span style="padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,#ff6b35,#ffb627);color:#0b0f14;font-weight:600;font-size:0.85rem;">🔥 Năng lượng</span>
+          <span style="padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,#ff3d68,#ff8fa3);color:#0b0f14;font-weight:600;font-size:0.85rem;">⚡ Tốc độ</span>
+          <span style="padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,#34d399,#a7f3d0);color:#0b0f14;font-weight:600;font-size:0.85rem;">💪 Sức mạnh</span>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>12K+</strong>
+            <span>khách hàng</span>
+          </div>
+          <div>
+            <strong>280+</strong>
+            <span>sản phẩm</span>
+          </div>
+          <div>
+            <strong>4.9/5</strong>
+            <span>đánh giá</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <div class="card-glass">
+          <h3>Combo nổi bật</h3>
+          <p>Giàn đa năng + ghế tập + tạ điều chỉnh</p>
+          <div class="price">19.990.000₫</div>
+          <button class="btn primary small add-to-cart" data-name="Combo GX-500" data-price="19990000">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </section>
 
-    <script src="products.js"></script>
-    <script src="script.js"></script>
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>🔥 Khuyến mãi 30% • Giao nhanh 2H • Bảo hành 24 tháng • Lắp đặt tận nơi •</span>
+        <span>🔥 Khuyến mãi 30% • Giao nhanh 2H • Bảo hành 24 tháng • Lắp đặt tận nơi •</span>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="section-head">
+        <h2>Sản phẩm nổi bật</h2>
+        <p>Chọn nhanh thiết bị phù hợp mục tiêu của bạn.</p>
+        <div class="filters" role="tablist" data-tour="filters">
+          <button class="chip active" data-filter="all">Tất cả</button>
+          <button class="chip" data-filter="strength">Sức mạnh</button>
+          <button class="chip" data-filter="cardio">Cardio</button>
+          <button class="chip" data-filter="accessory">Phụ kiện</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product" data-category="strength">
+          <div class="product-media">
+            <div class="tag">Bán chạy</div>
+          </div>
+          <h3>Giàn tập đa năng GX-500</h3>
+          <p>Khung thép 2mm, chịu tải 500kg, thiết kế tối ưu không gian.</p>
+          <div class="product-foot">
+            <span class="price">24.500.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Giàn tập GX-500" data-price="24500000" data-tour="add">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="cardio">
+          <div class="product-media cardio"></div>
+          <h3>Máy chạy bộ AirRun X</h3>
+          <p>Động cơ 3HP, màn hình cảm ứng, 12 chế độ luyện tập.</p>
+          <div class="product-foot">
+            <span class="price">18.200.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="AirRun X" data-price="18200000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="strength">
+          <div class="product-media strength"></div>
+          <h3>Tạ điều chỉnh ProFlex</h3>
+          <p>Điều chỉnh 2–24kg, khóa an toàn, tiết kiệm diện tích.</p>
+          <div class="product-foot">
+            <span class="price">6.900.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Tạ ProFlex" data-price="6900000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="accessory">
+          <div class="product-media accessory"></div>
+          <h3>Thảm tập chống trượt</h3>
+          <p>Độ dày 12mm, chống ồn, thân thiện môi trường.</p>
+          <div class="product-foot">
+            <span class="price">490.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Thảm chống trượt" data-price="490000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="cardio">
+          <div class="product-media cardio two"></div>
+          <h3>Xe đạp tập Sprint S</h3>
+          <p>Kháng lực từ tính, kết nối app, theo dõi nhịp tim.</p>
+          <div class="product-foot">
+            <span class="price">7.800.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Sprint S" data-price="7800000">Thêm</button>
+          </div>
+        </article>
+        <article class="product" data-category="accessory">
+          <div class="product-media accessory two"></div>
+          <h3>Bộ dây kháng lực Elite</h3>
+          <p>5 mức lực, tay cầm chắc chắn, phù hợp toàn thân.</p>
+          <div class="product-foot">
+            <span class="price">650.000₫</span>
+            <button class="btn outline small add-to-cart" data-name="Dây kháng lực Elite" data-price="650000">Thêm</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="section feature-section">
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Thiết kế hiện đại</h3>
+          <p>Bề mặt kim loại mờ, màu sắc tối giản, phù hợp mọi không gian.</p>
+        </div>
+        <div class="feature">
+          <h3>Giao nhanh trong ngày</h3>
+          <p>Hệ thống kho thông minh hỗ trợ giao nhanh 2–4h tại nội thành.</p>
+        </div>
+        <div class="feature">
+          <h3>Hỗ trợ kỹ thuật 24/7</h3>
+          <p>Đội ngũ kỹ sư hỗ trợ lắp đặt, bảo trì và tư vấn bài tập.</p>
+        </div>
+        <div class="feature">
+          <h3>Bảo hành chính hãng</h3>
+          <p>Cam kết bảo hành 24 tháng, đổi trả 7 ngày nếu lỗi nhà sản xuất.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section reviews">
+      <div class="section-head">
+        <h2>Khách hàng nói gì</h2>
+        <p>Trải nghiệm thực tế từ cộng đồng fitness.</p>
+      </div>
+      <div class="review-grid">
+        <article class="review">
+          <p>“Thiết bị rất chắc chắn, thiết kế đẹp và vận hành cực êm. Giao lắp trong 3h.”</p>
+          <div class="reviewer">
+            <span class="dot"></span>
+            <div>
+              <strong>Hoàng Mai</strong>
+              <small>HLV Fitness</small>
+            </div>
+          </div>
+        </article>
+        <article class="review">
+          <p>“Mình ở chung cư nên cần gọn gàng, combo tạ điều chỉnh cực kỳ phù hợp.”</p>
+          <div class="reviewer">
+            <span class="dot"></span>
+            <div>
+              <strong>Minh Khoa</strong>
+              <small>Runner</small>
+            </div>
+          </div>
+        </article>
+        <article class="review">
+          <p>“Dịch vụ hỗ trợ và bảo hành tuyệt vời, tư vấn rất nhiệt tình.”</p>
+          <div class="reviewer">
+            <span class="dot"></span>
+            <div>
+              <strong>Lan Anh</strong>
+              <small>Gym Enthusiast</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta" class="section cta">
+      <div>
+        <h2>Sẵn sàng nâng cấp phòng gym?</h2>
+        <p>Nhận tư vấn cá nhân hoá và báo giá tốt nhất ngay hôm nay.</p>
+      </div>
+      <div class="cta-actions">
+        <input type="email" placeholder="Email của bạn" aria-label="Email" />
+        <button class="btn primary">Nhận báo giá</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 GYM PRO GEAR. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <div class="tour-overlay" data-tour-overlay aria-hidden="true">
+    <div class="tour-card" role="dialog" aria-live="polite">
+      <h4 class="tour-title"></h4>
+      <p class="tour-desc"></p>
+      <div class="tour-actions">
+        <button class="btn outline small tour-skip">Bỏ qua</button>
+        <button class="btn primary small tour-next">Tiếp theo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
